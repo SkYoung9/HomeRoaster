@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Recipe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="description" type="xs:string"/>
+				<xs:element name="bean" type="xs:string"/>
+				<xs:element name="roast" type="xs:string"/>
+				<xs:element name="step" minOccurs="1" maxOccurs="50">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="order" type="xs:integer"/>
+							<xs:element name="time">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="600"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="temp">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:minInclusive value="150"/>
+										<xs:maxInclusive value="500"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="startAfterTemp" type="xs:boolean"/>
+						</xs:sequence>
+					</xs:complexType>				
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

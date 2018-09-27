@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="recipe.xsd">
+	<name>Test</name>
+	<description>This is my test description.</description>
+	<bean>The Good Bean</bean>
+	<roast>City</roast>
+	<step>
+		<order>1</order>
+		<time>30</time>
+		<temp>200</temp>
+		<startAfterTemp>false</startAfterTemp>
+	</step>
+	<step>
+		<order>2</order>
+		<time>180</time>
+		<temp>350</temp>
+		<startAfterTemp>true</startAfterTemp>
+	</step>
+	<step>
+		<order>3</order>
+		<time>60</time>
+		<temp>410</temp>
+		<startAfterTemp>true</startAfterTemp>
+	</step>
+	<step>
+		<order>4</order>
+		<time>180</time>
+		<temp>150</temp>
+		<startAfterTemp>false</startAfterTemp>
+	</step>
+</Recipe>
